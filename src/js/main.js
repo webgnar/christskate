@@ -5,6 +5,15 @@ import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { Character } from './entities/Character';
 import { PlayerController } from './entities/PlayerController';
 
+// Import textures
+import flowerTexture from '../assets/textures/flower.jpg';
+import shoeTexture from '../assets/textures/shoe.png';
+import muscleTexture from '../assets/textures/muscle.png';
+import stripesTexture from '../assets/textures/stripes.png';
+import boardTexture from '../assets/textures/board.png';
+import faceTexture from '../assets/textures/face.png';
+import groundTexture from '../assets/textures/ground.png';
+
 // Create texture loader at the top level
 const textureLoader = new THREE.TextureLoader();
 // Create font loader at the top level
@@ -95,7 +104,7 @@ class Game {
 
     loadCharacterTextures() {
         // Load flower texture for torso
-        textureLoader.load('./assets/textures/flower.jpg', 
+        textureLoader.load(flowerTexture, 
             // Success callback
             (texture) => {
                 console.log('Flower texture loaded successfully');
@@ -117,7 +126,7 @@ class Game {
         );
 
         // Load shoe texture for feet
-        textureLoader.load('./assets/textures/shoe.png',
+        textureLoader.load(shoeTexture,
             // Success callback
             (texture) => {
                 console.log('Shoe texture loaded successfully');
@@ -136,7 +145,7 @@ class Game {
         );
 
         // Load muscle texture for arms
-        textureLoader.load('./assets/textures/muscle.png',
+        textureLoader.load(muscleTexture,
             // Success callback
             (texture) => {
                 console.log('Muscle texture loaded successfully');
@@ -158,7 +167,7 @@ class Game {
         );
 
         // Load stripes texture for legs
-        textureLoader.load('./assets/textures/stripes.png',
+        textureLoader.load(stripesTexture,
             // Success callback
             (texture) => {
                 console.log('Stripes texture loaded successfully');
@@ -178,7 +187,7 @@ class Game {
         );
 
         // Load board texture for skateboard deck
-        textureLoader.load('./assets/textures/board.png',
+        textureLoader.load(boardTexture,
             // Success callback
             (texture) => {
                 console.log('Board texture loaded successfully');
@@ -198,7 +207,7 @@ class Game {
         );
 
         // Load face texture for head
-        textureLoader.load('./assets/textures/face.png',
+        textureLoader.load(faceTexture,
             // Success callback
             (texture) => {
                 console.log('Face texture loaded successfully');
@@ -232,8 +241,8 @@ class Game {
         this.ground.position.y = 0;
         this.scene.add(this.ground);
 
-        // Load texture using relative path
-        textureLoader.load('./assets/textures/ground.png', 
+        // Load texture using imported path
+        textureLoader.load(groundTexture, 
             // Success callback
             (texture) => {
                 console.log('Texture loaded successfully!');
