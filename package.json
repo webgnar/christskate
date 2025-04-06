@@ -5,7 +5,7 @@
   "main": "src/js/main.js",
   "scripts": {
     "start": "vite",
-    "build": "vite build",
+    "build": "vite build --outDir ../dist",
     "preview": "vite preview"
   },
   "repository": {
