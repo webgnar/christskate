@@ -105,42 +105,36 @@ class Game {
     loadCharacterTextures() {
         // Load flower texture for torso
         textureLoader.load(flowerTexture, 
-            // Success callback
             (texture) => {
-                console.log('Flower texture loaded successfully');
+                console.log('Flower texture loaded successfully from:', flowerTexture);
                 texture.wrapS = THREE.RepeatWrapping;
                 texture.wrapT = THREE.RepeatWrapping;
                 texture.repeat.set(1, 1);
-                
-                // Apply to torso only
                 this.character.setTexture('torso', texture);
             },
-            // Progress callback
             (xhr) => {
                 console.log('Loading flower texture: ' + (xhr.loaded / xhr.total * 100) + '%');
             },
-            // Error callback
             (error) => {
                 console.error('Error loading flower texture:', error);
+                console.error('Attempted to load from path:', flowerTexture);
             }
         );
 
         // Load shoe texture for feet
         textureLoader.load(shoeTexture,
-            // Success callback
             (texture) => {
-                console.log('Shoe texture loaded successfully');
+                console.log('Shoe texture loaded successfully from:', shoeTexture);
                 texture.wrapS = THREE.ClampToEdgeWrapping;
                 texture.wrapT = THREE.ClampToEdgeWrapping;
                 this.character.setTexture('feet', texture);
             },
-            // Progress callback
             (xhr) => {
                 console.log('Loading shoe texture: ' + (xhr.loaded / xhr.total * 100) + '%');
             },
-            // Error callback
             (error) => {
                 console.error('Error loading shoe texture:', error);
+                console.error('Attempted to load from path:', shoeTexture);
             }
         );
 
