@@ -6,13 +6,13 @@ import { Character } from './entities/Character';
 import { PlayerController } from './entities/PlayerController';
 
 // Import textures
-import flowerTexture from '../assets/textures/flower.jpg';
-import shoeTexture from '../assets/textures/shoe.png';
-import muscleTexture from '../assets/textures/muscle.png';
-import stripesTexture from '../assets/textures/stripes.png';
-import boardTexture from '../assets/textures/board.png';
-import faceTexture from '../assets/textures/face.png';
-import groundTexture from '../assets/textures/ground.png';
+import flowerTexture from '/assets/textures/flower.jpg';
+import shoeTexture from '/assets/textures/shoe.png';
+import muscleTexture from '/assets/textures/muscle.png';
+import stripesTexture from '/assets/textures/stripes.png';
+import boardTexture from '/assets/textures/board.png';
+import faceTexture from '/assets/textures/face.png';
+import groundTexture from '/assets/textures/ground.png';
 
 // Create texture loader at the top level
 const textureLoader = new THREE.TextureLoader();
