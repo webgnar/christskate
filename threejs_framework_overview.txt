@@ -1,0 +1,59 @@
+Three.js Framework Overview
+========================
+
+This is a Three.js project template that provides a comprehensive structure for 3D web graphics development. Here's a breakdown of the key components and capabilities:
+
+1. Project Structure
+------------------
+/src        - Core source code
+/examples   - Example implementations and demos
+/build      - Built/compiled files
+/docs       - Documentation
+/editor     - Editor-related functionality
+/utils      - Utility functions and helpers
+/test       - Test files
+/playground - Development and testing area
+
+2. Core Capabilities
+------------------
+- 3D scene creation and management
+- WebGL rendering
+- Geometry and mesh handling
+- Material and texture management
+- Lighting and shadow systems
+- Camera controls and viewports
+- Animation system
+- Asset loading and management
+
+3. Development Tools
+------------------
+- Modern build system
+- ESLint configuration for code quality
+- Editor configuration
+- Comprehensive documentation
+- Testing framework
+- Example implementations
+
+4. Key Features
+-------------
+- WebGL-based 3D rendering
+- Extensive geometry primitives
+- PBR materials support
+- Real-time shadows and lighting
+- Camera controls (orbit, fly, etc.)
+- Scene graph management
+- Animation system
+- Loader system for various 3D formats
+- Post-processing effects
+- Particle systems
+
+5. Development Environment
+------------------------
+- Node.js based development
+- Modern JavaScript/ES6+ support
+- Module bundling
+- Development server
+- Hot reloading
+- Source maps for debugging
+
+This template provides a solid foundation for building 3D web applications using Three.js, with all necessary tools and structure for both development and production environments. 

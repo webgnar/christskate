@@ -1,0 +1,33 @@
+{
+  "name": "christskate",
+  "version": "1.0.0",
+  "description": "A 3D skateboarding game built with Three.js",
+  "main": "src/js/main.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webgnar/christskate.git"
+  },
+  "keywords": [
+    "threejs",
+    "game",
+    "3d",
+    "skateboarding"
+  ],
+  "author": "webgnar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webgnar/christskate/issues"
+  },
+  "homepage": "https://github.com/webgnar/christskate#readme",
+  "dependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

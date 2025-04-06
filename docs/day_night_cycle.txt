@@ -1,0 +1,127 @@
+# Day/Night Cycle Documentation
+
+## Time System
+- Complete cycle duration: 60 seconds
+- Time represented as value from 0 to 1 (`timeOfDay`)
+- Six distinct phases, each lasting 10 seconds (0.167 of total cycle)
+
+### Phase Breakdown
+1. **Sunrise (0.0-0.167)**
+   - Sun rises from 1% to 50% intensity
+   - Moon fades from 50% to 0%
+   - Stars fade from 50% to 0%
+   - Character light dims from 50% to 0%
+
+2. **Morning to Noon (0.167-0.333)**
+   - Sun increases from 50% to 100% intensity
+   - Moon completely hidden
+   - No stars visible
+   - No character light
+
+3. **Afternoon to Sunset (0.333-0.5)**
+   - Sun decreases from 100% to 1%
+   - Moon begins appearing (0% to 1%)
+   - Character light increases 0% to 30%
+   - No stars yet
+
+4. **Moonrise (0.5-0.667)**
+   - Sun completely hidden
+   - Moon increases from 1% to 50%
+   - Stars fade in from 0% to 80%
+   - Character light increases 30% to 70%
+
+5. **Evening to Midnight (0.667-0.833)**
+   - Moon increases from 50% to 100%
+   - Stars at full brightness (80%)
+   - Character light constant at 70%
+
+6. **Late Night to Dawn (0.833-1.0)**
+   - Moon decreases from 100% to 50%
+   - Stars fade from 80% to 50%
+   - Character light dims from 70% to 50%
+   - Sun begins to appear (0% to 1%)
+
+## Visual Elements
+
+### 1. Celestial Bodies
+- **Sun**
+  - Size: 15 units radius (30 units diameter)
+  - Glow effect: 21 units radius
+  - Color: 0xffdd00 (yellow)
+  - Glow color: 0xffee88 (light yellow)
+
+- **Moon**
+  - Size: 5 units radius (10 units diameter)
+  - Glow effect: 7 units radius
+  - Color: 0xeeeeee (white)
+  - Glow color: 0x8888ff (light blue)
+
+### 2. Lighting
+- **Sun Light**
+  - Type: PointLight
+  - Base color: 0xfff1d8 (warm white)
+  - Distance: 1000 units
+  - Decay: 1
+  - Colors throughout day:
+    - Sunrise: 0xffd7aa (warm sunrise)
+    - Noon: 0xfff1d8 (bright daylight)
+    - Sunset: 0xff9955 (warm sunset)
+
+- **Moon Light**
+  - Type: PointLight
+  - Base color: 0x8897ff (cool blue)
+  - Distance: 800 units
+  - Decay: 1
+  - Colors throughout night:
+    - Moonrise: 0x8897ff (cool moonlight)
+    - Midnight: 0x6b7bff (deep blue moonlight)
+    - Predawn: 0x8897ff (cool moonlight)
+
+- **Ambient Light**
+  - Colors throughout cycle:
+    - Sunrise: 0x8897ff (cool dawn)
+    - Noon: 0x8ec4ff (bright sky blue)
+    - Sunset: 0xff9955 (warm orange)
+    - Night: 0x1a1a2a (dark blue)
+    - Predawn: 0x2a2a3a (dark blue)
+  - Intensity varies: 0.15 to 0.4
+
+### 3. Sky Colors
+- **Day**
+  - Top: 0x1A4CE6 (sky blue)
+  - Bottom: 0x8099FF (light blue)
+
+- **Sunset/Sunrise**
+  - Top: 0x1A2666 (dark blue)
+  - Middle: 0xF25426 (orange)
+  - Bottom: 0xF29966 (light orange/pink)
+
+- **Night**
+  - Top: 0x000019 (dark blue)
+  - Bottom: 0x0D0D26 (slightly lighter blue)
+
+### 4. Stars
+- **Background Stars**
+  - Count: 2000
+  - Three size categories:
+    - 1% Very bright (size 3.0)
+    - 4% Medium (size 2.0)
+    - 95% Regular (size 1.0)
+  - Rotation speed: 0.02 radians per second
+
+- **Constellations**
+  - Three patterns: Orion, Big Dipper, Cassiopeia
+  - Star size: 4.0
+  - Connection lines: Color 0x4444ff
+  - Opacity: 120% of regular stars
+
+### 5. Character Light
+- Point light following character
+- Color: 0xffffaa (warm light)
+- Radius: 5 units
+- Position: 1 unit above character
+- Intensity varies by time of day:
+  - Day: 0
+  - Sunset: 0.3
+  - Night: 0.7
+  - Dawn: 0.5 
