@@ -10,8 +10,8 @@
     }
   ],
   "routes": [
+    { "src": "^/assets/(.*)", "dest": "/assets/$1" },
     { "handle": "filesystem" },
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 } 
